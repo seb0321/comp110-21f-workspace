@@ -1,4 +1,4 @@
-"""Relational Operators"""
+"""Relational Operators."""
 
 left_hand_side: str = input("Left-hand side: ")
 right_hand_side: str = input("Right-hand side: ")
