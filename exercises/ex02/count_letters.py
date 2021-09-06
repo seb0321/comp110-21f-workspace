@@ -9,6 +9,6 @@ while i < n:
     if ENTERWORD[i] == WHATLETTER:
         COUNT = COUNT + 1
     i += 1
-print("Count: ", COUNT)
+print("Count:", COUNT)
 
 _author_ = "730358517"

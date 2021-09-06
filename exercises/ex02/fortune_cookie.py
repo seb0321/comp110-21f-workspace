@@ -17,7 +17,7 @@ if RANDOMINTEGER >= 1:
                 if RANDOMINTEGER == 4:
                     print("All your hardwork will pay off.")
 
-print("Now, go spread postive vibes!")
+print("Now, go spread positive vibes!")
 
 
 _author_ = "730358517"
