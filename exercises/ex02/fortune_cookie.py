@@ -6,7 +6,7 @@ RANDOMINTEGER = randint(1, 4)
 
 if RANDOMINTEGER >= 1:
     if RANDOMINTEGER == 1:
-        print("You are beautiful.")
+        print("You are beautiful on the inside and out.")
     else:
         if RANDOMINTEGER == 2:
             print("Don't just think, act!")
