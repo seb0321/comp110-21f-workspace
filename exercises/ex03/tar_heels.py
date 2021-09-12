@@ -1,6 +1,12 @@
 """An exercise in remainders and boolean logic."""
 
-__author__ = "ENTER YOUR 9-DIGIT PID HERE"
+UserInt = int(input("Enter an int:"))
 
-
-# Begin your solution here...
+if UserInt % 2 == 0 and UserInt % 7 != 0:
+    print("TAR")
+if UserInt % 7 == 0 and UserInt % 2 != 0: 
+    print("HEELS")
+if UserInt % 7 == 0 and UserInt % 2 == 0:
+    print("TAR HEELS")
+else:
+    print("CAROLINA")
