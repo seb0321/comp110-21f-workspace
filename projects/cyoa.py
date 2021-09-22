@@ -14,6 +14,7 @@ count = 0
 
 
 def greet() -> None:
+    """HELLO!!"""
     global player 
     player = input("What is your name? ")
     print(f"Welcome to your virtual garden, {player}!")
@@ -21,6 +22,7 @@ def greet() -> None:
 
 
 def CactusFunc(a) -> None:
+    """The tricky cactus."""
     global points 
     global cactus 
     global plant
@@ -48,6 +50,7 @@ def CactusFunc(a) -> None:
 
 
 def YesNoFunc() -> str:
+    """Yes or no??"""
     Yes_No = input("Yes or No? ")
     Yes_No = Yes_No.lower()
     if Yes_No == "yes":
@@ -57,6 +60,7 @@ def YesNoFunc() -> str:
 
 
 def plant_shopping() -> None:
+    """Go plant shopping!!"""
     global player 
     global points
     global cactus
@@ -139,6 +143,7 @@ def plant_shopping() -> None:
 
 
 def take_care(p: int) -> int:
+    """Take care of your plants!"""
     global cactus 
     global plant
     global count
@@ -215,6 +220,7 @@ def take_care(p: int) -> int:
 
 
 def main() -> None:
+    """Run this back!"""
     global points 
     global cactus 
     global plant
