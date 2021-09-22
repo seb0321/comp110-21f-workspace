@@ -20,7 +20,7 @@ def greet() -> None:
     print("In this game you will follow prompts and try not to kill your plants. If you get 500 adventure points, you win! Have fun!!")
 
 
-def CactusFunc(a):
+def CactusFunc(a) -> None:
     global points 
     global cactus 
     global plant
@@ -47,7 +47,7 @@ def CactusFunc(a):
         take_care(a)
 
 
-def YesNoFunc():
+def YesNoFunc() -> str:
     Yes_No = input("Yes or No? ")
     Yes_No = Yes_No.lower()
     if Yes_No == "yes":
@@ -56,7 +56,7 @@ def YesNoFunc():
         return "no"
 
 
-def plant_shopping():
+def plant_shopping() -> None:
     global player 
     global points
     global cactus
@@ -138,7 +138,7 @@ def plant_shopping():
             points = take_care(points)
 
 
-def take_care(p):
+def take_care(p:int) -> int:
     global cactus 
     global plant
     global count
