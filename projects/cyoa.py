@@ -138,7 +138,7 @@ def plant_shopping() -> None:
             points = take_care(points)
 
 
-def take_care(p:int) -> int:
+def take_care(p: int) -> int:
     global cactus 
     global plant
     global count
