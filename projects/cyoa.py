@@ -1,23 +1,23 @@
 """Choose your own adventure!"""
 import random
 
-points = 0
+points: int = 0
 HILARIOUS = "\U0001F923"
 BAD = "\U0001F643"
 GOOD = "\U0001F607"
 PLANT = "\U0001F331"
 SHOCKED = "\U0001F631"
 cactus = 0
-player = 0
+player: str = ""
 plant = 0
 count = 0
 
 
-def greet():
+def greet() -> None:
     global player 
     player = input("What is your name? ")
     print(f"Welcome to your virtual garden, {player}!")
-    print("In this game you will follow prompts and try not to kill your plants. 500 points and you win. Have fun!")
+    print("In this game you will follow prompts and try not to kill your plants. If you get 500 adventure points, you win! Have fun!!")
 
 
 def CactusFunc(a):
@@ -38,12 +38,12 @@ def CactusFunc(a):
         a = 0
         cactus = 0
         plant = plant - cactus
-        print("You no longer have any cacti and your points are 0.")
+        print("You no longer have any cacti and your adventure points are 0.")
         take_care(a)
     else: 
-        print("Great job! Plus 200 points!")
+        print("Great job! Plus 200 adventure points!")
         a = a + 200
-        print(f"You have {a} points")
+        print(f"You have {a} adventure points")
         take_care(a)
 
 
@@ -81,18 +81,18 @@ def plant_shopping():
                     plant_shopping()
                 else:
                     points = points - 10
-                    print(BAD, "Minus 10 points.")
-                    print(f"{BAD}, minus 10 points. You have {points} adventure points. Thanks for playing, goodbye.")
+                    print(BAD, "Minus 10 adventure points.")
+                    print(f"{BAD}, minus 10 adventure points. You have {points} adventure points. Thanks for playing, goodbye!")
         elif player_input == "cactus" or player_input == "a cactus":
             plant = plant + 1
             points = 3
             cactus = cactus + 1
-            print("Be careful! Don't water too much!! Plus 3 points!")
-            print(f"Would you like to take care of it {player}? (no = buy another plant")
+            print("Be careful! Don't water too much!! Plus 3 adventure points!")
+            print(f"Would you like to take care of it {player}? (No = buy another plant)")
             YesNo = YesNoFunc()
             if YesNo == "yes":
                 points = points + 10
-                print(GOOD, PLANT, "Plus 10 points!")
+                print(GOOD, PLANT, "Plus 10 adventure points!")
                 points = take_care(points)
             else: 
                 print(f"Would you like to buy another plant {player}?")
@@ -101,17 +101,17 @@ def plant_shopping():
                     plant_shopping()
                 else:
                     points = points - 10
-                    print(BAD, "Minus 10 points.")
-                    print(f"{BAD}, minus 10 points. You have {points} adventure points. Thanks for playing, goodbye.")
+                    print(BAD, "Minus 10 adventure points.")
+                    print(f"{BAD}, minus 10 adventure points. You have {points} adventure points. Thanks for playing, goodbye.")
         elif player_input == "pothos" or player_input == "a pothos":
             plant = plant + 1
             points = points + 10
-            print("That's a great choice! They are super easy to take care of! Plus 10 points!")
-            print(f"Would you like to take care of it {player}? (no = buy another plant")
+            print("That's a great choice! They are super easy to take care of! Plus 10 adventure points!")
+            print(f"Would you like to take care of it {player}? (no = buy another plant)")
             YesNo = YesNoFunc()
             if YesNo == "yes":
                 points = points + 10
-                print(GOOD, PLANT, "Plus 10 points!")
+                print(GOOD, PLANT, "Plus 10 adventure points!")
                 points = take_care(points)
             else: 
                 print(f"Would you like to buy another plant {player}?")
@@ -120,11 +120,11 @@ def plant_shopping():
                     plant_shopping()
                 else:
                     points = points - 10
-                    print(f"{BAD}, minus 10 points. You have {points} adventure points. Thanks for playing, goodbye.")
+                    print(f"{BAD}, minus 10 adventure points. You have {points} adventure points. Thanks for playing, goodbye.")
         elif player_input == "fake plant":
             plant = plant + 1
             points = points - 150
-            print("Minus 150 points and go buy another plant.", HILARIOUS)
+            print("Minus 150 adventure points and go buy another plant.", HILARIOUS)
             plant_shopping()
         else: 
             print("Oops! Make sure you spelt your entry correctly and/or capitalized properly.")
@@ -151,13 +151,13 @@ def take_care(p):
             exit()
         count = count + 1
         if count == 4: 
-            print("Proceed with caution")
+            print("Proceed with caution.")
         if count % 5 == 0:
             p = p - (75 * plant)
             count = 0
-            print(SHOCKED, "You lost 75 points per plant for giving your plant(s) too much love! You have", p, "points.")
+            print(SHOCKED, "You lost 75 adventure points per plant for giving your plant(s) too much love! You have", p, "points.")
             take_care(p)
-        print(f"Yay! Your points are in the positive {GOOD}")
+        print(f"Yay! Your adventure points are in the positive {GOOD}")
         player_input = int(input("Do you want to: \n 1. Water your plant \n 2. Remove dead leaves \n 3. Fertilize \n 4. Leave game \n Enter a number: "))
         if player_input == 1:
             if cactus >= 1:
@@ -173,7 +173,7 @@ def take_care(p):
             Fertilizer = random.randint(0, 1)
             if Fertilizer == 1: 
                 p = p + (10 * plant)
-                print("You got 10 points per plant! You have", p, "points!")
+                print("You got 10 adventure points per plant! You have", p, "points!")
             else: 
                 p = p - (plant * 20)
                 print("You got a bad fertilizer! Minus 20 per plant.")
@@ -187,7 +187,7 @@ def take_care(p):
             plant = 0
             p = 0
             return p
-        print(SHOCKED, "OH NO! You have negative points!! You better start taking better care of your ", PLANT, "!")
+        print(SHOCKED, "OH NO! You have negative adventure points!! You better start taking better care of your ", PLANT, "!")
         player_input = int(input("Do you want to: \n 1. Water your plant \n 2. Remove dead leaves \n 3. Fertilize \n 4. Leave game \n Enter a number: "))
         if player_input == 1:
             if cactus >= 1:
@@ -195,26 +195,26 @@ def take_care(p):
             else: 
                 WaterPoints = random.randint(0, 50)
                 p = p + (WaterPoints * plant)
-                print(f"{player}, you got {WaterPoints} points per plant. You now have {p} points")
+                print(f"{player}, you got {WaterPoints} adventure points per plant. You now have {p} adventure points")
         elif player_input == 2: 
             p = p + (15 * plant)
-            print(f"You now have {p} points!")
+            print(f"You now have {p} adventure points!")
         elif player_input == 3: 
             Fertilizer = random.randint(0, 1)
             if Fertilizer == 1: 
                 p = p + (5 * plant) 
-                print(f"You got {p} points!")
+                print(f"You got {p} adventure points!")
             else: 
                 p = p - (10 * plant)
                 print("You got a bad fertilizer.")
-                print(f"You have {p} points")
+                print(f"You have {p} adventure points")
         else: 
-            print(f"Bye, you had {p} points. Thanks for playing!")
+            print(f"Bye, you had {p} adventure points. Thanks for playing!")
             exit()
     return p
 
 
-def main():
+def main() -> None:
     global points 
     global cactus 
     global plant
