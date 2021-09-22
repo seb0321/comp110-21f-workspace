@@ -21,7 +21,7 @@ def greet() -> None:
     print("In this game you will follow prompts and try not to kill your plants. If you get 500 adventure points, you win! Have fun!!")
 
 
-def CactusFunc(a) -> None:
+def CactusFunc(a: int) -> None:
     """The tricky cactus."""
     global points 
     global cactus 
