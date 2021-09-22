@@ -1,4 +1,4 @@
-"""Choose your own adventure!"""
+"""Choose Your Own Adventure!"""
 import random
 
 points: int = 0
