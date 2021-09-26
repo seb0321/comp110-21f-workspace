@@ -15,6 +15,8 @@ def all(intlist: list, number: int) -> bool:
 
 def is_equal(numberlist: list[int], numbercatalog: list[int]) -> bool:
     """Equal function."""
+    if len(numbercatalog) != len(numberlist):
+        return False
     i: int = 0 
     while i < len(numberlist):
         if numberlist[i] != numbercatalog[i]:
@@ -30,6 +32,7 @@ def max(input: list[int]) -> int:
     while i < len(input):
         if input[i] > m:
             m = input[i]
+            i += 1
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     return m
