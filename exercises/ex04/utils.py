@@ -1,8 +1,11 @@
 """List utility functions."""
 
 
-def all(intlist, number) -> bool:
+def all(intlist: list, number: int) -> bool:
+    """All function."""
     i: int = 0 
+    if len(intlist) == 0:
+        return False
     while i < len(intlist):
         if intlist[i] != number:
             return False
@@ -10,27 +13,30 @@ def all(intlist, number) -> bool:
     return True
 
 
-def is_equal(numberlist, numbercatalog) -> bool:
+def is_equal(numberlist: list[int], numbercatalog: list[int]) -> bool:
+    """Equal function."""
     i: int = 0 
     while i < len(numberlist):
-        if numberlist[i] != numbercatalog:
+        if numberlist[i] != numbercatalog[i]:
             return False
         i += 1
     return True
 
 
 def max(input: list[int]) -> int:
-    m = input[0]
-    i = 0
+    """Max function."""
+    m: int = input[0]
+    i: int = 0
     while i < len(input):
-        if input[i] < m:
+        if input[i] > m:
             m = input[i]
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
-    return m 
+    return m
     
         
 def main():
+    """Main Function."""
     print(all([1, 2, 3], 1))
     print(all([1, 1, 1], 2))
     print(all([1, 1, 1], 1))
