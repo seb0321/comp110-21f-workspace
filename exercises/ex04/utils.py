@@ -1,7 +1,7 @@
 """List utility functions."""
 
 
-def all(intlist: list, number: int) -> bool:
+def all(intlist: list[int], number: int) -> bool:
     """All function."""
     i: int = 0 
     if len(intlist) == 0:
@@ -32,13 +32,13 @@ def max(input: list[int]) -> int:
     while i < len(input):
         if input[i] > m:
             m = input[i]
-            i += 1
+        i += 1
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     return m
     
         
-def main():
+def main() -> None:
     """Main Function."""
     print(all([1, 2, 3], 1))
     print(all([1, 1, 1], 2))
@@ -55,5 +55,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-__author__ = "730358517"
 
+__author__ = "730358517"
