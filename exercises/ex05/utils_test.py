@@ -10,6 +10,7 @@ def test_only_evens() -> None:
     assert only_evens(xs) == 0
 
 def test_only_even
+"""Practice."""
     xs: list[int] = []
 
 

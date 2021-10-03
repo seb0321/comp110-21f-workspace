@@ -16,9 +16,6 @@ def only_evens(input: list[int]) -> list[int]:
 
 def sub(a_list: list[int], a: int, b: int) -> list[int]:
     """Sub Function."""
-    index = list()
-    for x in range(a, b):
-        index.append(a_list[x])
     if len(a_list) == 0:
         return []
     if a > b:
@@ -27,6 +24,10 @@ def sub(a_list: list[int], a: int, b: int) -> list[int]:
         return []
     if b > len(a_list):
         return []
+    index = list()
+    for x in range(a, b):
+        index.append(a_list[x])
+    
     return index
 
 
