@@ -3,20 +3,24 @@
 
 from exercises.ex05.utils import only_evens, sub, concat
 
+
 def test_only_evens() -> None:
-xs: list[int] = []
-assert only_evens(xs) == 0
+    """Test Only Evens."""
+    xs: list[int] = []
+    assert only_evens(xs) == 0
 
 
 def test_sub() -> None:
-xs: list[int] = []
-assert sub(xs) == 0
+    """Test Sub."""
+    xs: list[int] = []
+    assert sub(xs, 1, 3) == 0
 
 
 def test_concat() -> None:
-xs: list[int] = []
-assert concat(xs) == 0
-
+    """Test Concat."""
+    xs: list[int] = [1, 2, 3]
+    yay: list[int] = [6, 7, 11]
+    assert concat(xs, yay) == 0
 
 
 __author__ = "730358517"

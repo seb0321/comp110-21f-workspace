@@ -19,6 +19,14 @@ def sub(a_list: list[int], a: int, b: int) -> list[int]:
     index = list()
     for x in range(a, b):
         index.append(a_list[x])
+    if len(a_list) == 0:
+        return list()
+    if a > b:
+        return list()
+    if a < 0:
+        return list()
+    if b > len(a_list):
+        return list()
     return index
 
 
