@@ -20,13 +20,13 @@ def sub(a_list: list[int], a: int, b: int) -> list[int]:
     for x in range(a, b):
         index.append(a_list[x])
     if len(a_list) == 0:
-        return list()
+        return []
     if a > b:
-        return list()
+        return []
     if a < 0:
-        return list()
+        return []
     if b > len(a_list):
-        return list()
+        return []
     return index
 
 

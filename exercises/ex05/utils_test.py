@@ -9,6 +9,9 @@ def test_only_evens() -> None:
     xs: list[int] = []
     assert only_evens(xs) == 0
 
+def test_only_even
+    xs: list[int] = []
+
 
 def test_sub() -> None:
     """Test Sub."""
