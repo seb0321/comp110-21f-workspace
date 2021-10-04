@@ -1,4 +1,4 @@
-"""List utility functions part 2."""
+"""List utility functions."""
 
 
 def only_evens(input: list[int]) -> list[int]:
