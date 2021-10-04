@@ -23,7 +23,7 @@ def test_only_even_2() -> None:
 
 
 def test_sub_empty() -> None:
-    """Test Sub Empty"""
+    """Test Sub Empty."""
     xs: list[int] = []
     assert sub(xs, 6, 7) == []
 

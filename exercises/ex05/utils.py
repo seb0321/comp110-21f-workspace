@@ -32,7 +32,7 @@ def sub(a_list: list[int], a: int, b: int) -> list[int]:
 
 
 def concat(list_one: list[int], list_two: list[int]) -> list[int]:
-    """Concat Function. """
+    """Concat Function."""
     newlist = list_one + list_two
     return newlist
      
