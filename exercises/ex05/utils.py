@@ -21,9 +21,9 @@ def sub(a_list: list[int], a: int, b: int) -> list[int]:
     if a > b:
         return []
     if a < 0:
-        return []
+        a = 0
     if b > len(a_list):
-        return []
+        b = len(a_list)
     index = list()
     for x in range(a, b):
         index.append(a_list[x])
