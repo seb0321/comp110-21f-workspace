@@ -3,7 +3,6 @@
 
 def invert(input: dict[str, str]) -> dict[str, str]:
     """Invert Function."""
-    input = dict()
     for a in input.keys():
         for b in input.keys():
             if input[a] == input[b] and a != b: 

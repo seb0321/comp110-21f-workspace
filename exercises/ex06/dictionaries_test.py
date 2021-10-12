@@ -41,19 +41,19 @@ def favorite_color_2() -> None:
 
 
 def count_test() -> None:
-    """Test Favorite Color."""
+    """Count Test."""
     xs: list[str] = ['sarah', 'sam', 'sarah']
     assert count(xs) == ["sarah: 2, sam: 1"]
 
 
 def Count_test_1() -> None:
-    """Test Favorite Color 1."""
+    """Count Test 1."""
     xs: list[str] = ['jackson', 'sam', 'sarah']
     assert count(xs) == ["jackson: 1, sam: 1, sarah: 1"]
 
 
 def Count_test_2() -> None:
-    """Test Favorite Color 2."""
+    """Count Test 2."""
     xs: list[str] = ['sam', 'sarah', 'sam']
     assert count(xs) == ["sam: 2, sarah: 1"]
 
