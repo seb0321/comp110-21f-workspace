@@ -2,6 +2,7 @@
 
 
 def invert(input: dict[str, str]) -> dict[str, str]:
+    """Invert Function."""
     input = dict()
     for a in input.keys():
         for b in input.keys():
@@ -14,6 +15,7 @@ def invert(input: dict[str, str]) -> dict[str, str]:
     
     
 def favorite_color(color: dict[str, str]) -> str:
+    """Favorite Color Function!"""
     max = 0 
     curr = 0
     for a in color.keys():
@@ -24,10 +26,11 @@ def favorite_color(color: dict[str, str]) -> str:
             maxkey = a
             max = curr
         curr = 0
-    return maxkey
+    return maxkey 
     
 
 def count(input: list[str]) -> dict[str, int]:
+    """Count Function."""
     counter = dict()
     for a in input:
         counter[a] = 0
