@@ -3,14 +3,13 @@
 
 def invert(input: dict[str, str]) -> dict[str, str]:
     """Invert Function."""
-    for a in input.keys():
-        for b in input.keys():
-            if input[a] == input[b] and a != b: 
-                raise KeyError("You have an error.")
-    for i in input.keys():
-        input[input[i]] = i
-        input.pop(i)
-    return input
+    emptydict: dict[str, str] = {}
+
+    for a in input:
+        if input[a] in emptydict: 
+            raise KeyError("You have an error.")
+        emptydict[input[a]] = a
+    return emptydict
     
     
 def favorite_color(color: dict[str, str]) -> str:
