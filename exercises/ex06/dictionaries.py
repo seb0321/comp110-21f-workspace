@@ -14,17 +14,17 @@ def invert(input: dict[str, str]) -> dict[str, str]:
     
 def favorite_color(color: dict[str, str]) -> str:
     """Favorite Color Function!"""
-    max = 0 
+    max = 0
     curr = 0
-    for a in color.keys():
-        for b in color.keys():
-            if color[a] == color[b] and a != b:
+    for a in color:
+        for b in color:
+            if color[a] == color[b] and a != color[b]:
                 curr += 1      
         if curr > max:
-            maxkey = a
+            maxkey = color[a]
             max = curr
         curr = 0
-    return maxkey 
+    return maxkey
     
 
 def count(input: list[str]) -> dict[str, int]:
@@ -34,9 +34,20 @@ def count(input: list[str]) -> dict[str, int]:
         counter[a] = 0
     for a in counter.keys():
         for b in input:
-            if list(b) == a:
+            if b == a:
                 counter[a] = counter[a] + 1
     return counter
+
+
+def main() -> None:
+    """Main Function."""
+
+
+print(count(["Marc", "Ezri", "Marc"]))
+
+
+if __name__ == "__main__":
+    main()
 
 
 __author__ = "730358517"
