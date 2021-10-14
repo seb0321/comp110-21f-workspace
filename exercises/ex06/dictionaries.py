@@ -43,7 +43,7 @@ def main() -> None:
     """Main Function."""
 
 
-print(count(["Marc", "Ezri", "Marc"]))
+print(count(['sarah', 'sam', 'sarah']))
 
 
 if __name__ == "__main__":
