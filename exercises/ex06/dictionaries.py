@@ -39,15 +39,4 @@ def count(input: list[str]) -> dict[str, int]:
     return counter
 
 
-def main() -> None:
-    """Main Function."""
-
-
-print(count(['sarah', 'sam', 'sarah']))
-
-
-if __name__ == "__main__":
-    main()
-
-
 __author__ = "730358517"

@@ -3,11 +3,14 @@
 
 from exercises.ex06.dictionaries import invert, favorite_color, count 
 
+import pytest
+
 
 def test_invert_1() -> None:
     """Test Invert."""
     xs: dict[str, str] = {'sarah': 'jordan', 'michael': 'jordan'}
-    assert invert(xs) == KeyError
+    with pytest.raises(KeyError):
+        invert(xs)
 
 
 def test_invert_2() -> None:
