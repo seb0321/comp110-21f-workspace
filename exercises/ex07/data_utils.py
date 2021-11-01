@@ -1,4 +1,4 @@
-"""Utility functions."""
+"""Utility functions!"""
 
 __author__ = "730358517"
 
