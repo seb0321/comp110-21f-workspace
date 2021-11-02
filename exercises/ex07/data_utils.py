@@ -65,7 +65,10 @@ def concat(table1: dict[str, list[str]], table2: dict[str, list[str]]) -> dict[s
     for i in table1:
         result[i] = table1[i]
     for i in table2: 
-        result[i] = table2[i]
+        if i in result:
+            result[i] = result[i] + table2[i]
+        else: 
+            result[i] = table2[i]
 
     return result 
 
