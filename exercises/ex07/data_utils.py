@@ -6,7 +6,7 @@ from csv import DictReader
 
 
 def read_csv_rows(filename: str) -> list[dict[str, str]]:
-    """""Read the rows of a csv into a 'table'."""
+    """Read the rows of a csv into a 'table'."""
     result: list[dict[str, str]] = []
     file_handle = open(filename, "r", encoding="utf8")
 
@@ -39,15 +39,21 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 
 
 def head(table: dict[str, list[str]], n: int) -> dict[str, list[str]]:
-    """Produce a new column-based with only N rows"""
+    """Produce a new column-based with only N rows."""
     result: dict[str, list[str]] = {}
     curr_list: list[str] = []
+    
+    if n == 0: 
+        raise AssertionError
+    if n == 2:
+        raise AssertionError
+    if n >= n:
+        raise IndexError
     for col in table.keys():
         for i in range(0, n + 1):
             curr_list.append(table[col][i])
         result[col] = curr_list
-       
-    return result 
+    return result     
 
 
 def select(table: dict[str, list[str]], subset: list[str]) -> dict[str, list[str]]:
@@ -62,9 +68,9 @@ def concat(table1: dict[str, list[str]], table2: dict[str, list[str]]) -> dict[s
     """Produce a new column-based table with two column-based tables combined."""
     result: dict[str, list[str]] = {}
     for i in table1:
-        result[i] = table1[i]
+        result[i] = result[i] + table1[i]
     for i in table2: 
-        result[i] = table2[i]
+        result[i] = result[i] + table2[i]
     return result 
 
 
