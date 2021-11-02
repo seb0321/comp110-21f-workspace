@@ -44,10 +44,11 @@ def head(table: dict[str, list[str]], n: int) -> dict[str, list[str]]:
     curr_list: list[str] = []
  
     for col in table.keys():
-        for i in range(0, min(n, len(col))):
+        for i in range(0, min(n, len(table[col]))):
             curr_list.append(table[col][i])
         result[col] = curr_list
         curr_list: list[str] = []
+    
     return result     
 
 
