@@ -42,12 +42,12 @@ def head(table: dict[str, list[str]], n: int) -> dict[str, list[str]]:
     """Produce a new column-based with only N rows."""
     result: dict[str, list[str]] = {}
     curr_list: list[str] = []
-
-    
+ 
     for col in table.keys():
         for i in range(0, min(n, len(col))):
             curr_list.append(table[col][i])
         result[col] = curr_list
+        curr_list: list[str] = []
     return result     
 
 
@@ -65,7 +65,12 @@ def concat(table1: dict[str, list[str]], table2: dict[str, list[str]]) -> dict[s
     for i in table1:
         result[i] = table1[i]
     for i in table2: 
-        result[i] = table2[i]
+        if type(result[i] == list[str]):
+            for i in table2[i]:
+                table2[i].append
+        else:
+            result[i] = table2[i]
+
     return result 
 
 
