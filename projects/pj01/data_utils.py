@@ -25,7 +25,7 @@ def column_values(table: list[dict[str, str]], column: str) -> list[str]:
         item: str = row[column]
         result.append(item)
     return result 
-
+    
 
 def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
     """Transform a row-oriented table to a column-oriented table."""
@@ -70,6 +70,6 @@ def count(table: list[str]) -> dict[str, int]:
     return result
 
 
-def percentage(portion, total):
-    calculatepercent = 100 * float(portion) / float(total)
+def percentage(x: float, y: float):
+    calculatepercent = 100 * x / y
     return str(calculatepercent) + " %"
