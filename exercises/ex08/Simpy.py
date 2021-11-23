@@ -8,6 +8,7 @@ __author__ = "730358517"
 
 
 class Simpy:
+    """Simpy class."""
     values: list[float]
 
     def __init__(self, values: list[float]):
@@ -63,10 +64,10 @@ class Simpy:
                 i += 1
         return result
 
-    def __pow__(self, rhs: Union[float, int, Simpy]) -> Simpy:
+    def __pow__(self, rhs: Union[float, Simpy]) -> Simpy:
         """Operate overload for multiplication."""
         result: Simpy = Simpy([])
-        if isinstance(rhs, float) or isinstance(rhs, int):
+        if isinstance(rhs, float):
             for value in self.values:
                 result.values.append(value ** rhs)
         else:
